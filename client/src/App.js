@@ -1,7 +1,12 @@
-import React from 'react'
+import "./App.css";
 
 export const App = () => {
   return (
-    <div style={{height:'2rem', backgroundColor: 'red'}}>App</div>
-  )
-}
+    <div>
+      <header></header>
+      hola
+    </div>
+  );
+};
+
+export default App;
