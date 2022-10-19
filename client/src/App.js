@@ -1,10 +1,9 @@
 import "./App.css";
-
+import { ViewPort } from "./components/epg/ViewPort";
 export const App = () => {
   return (
     <div>
-      <header></header>
-      hola
+      <ViewPort />
     </div>
   );
 };
