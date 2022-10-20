@@ -1,5 +1,4 @@
 import { useEpg, Epg, Layout } from "planby";
-
 export const EpgWrapper = ({ epg, channels }) => {
   const {
     getEpgProps,
@@ -9,14 +8,16 @@ export const EpgWrapper = ({ epg, channels }) => {
     onScrollRight,
   } = useEpg({
     epg,
-    channels
+    channels,
+    itemHeight: 90,
   });
 
-  <div>
-    <div style={{ height: "600px", width: "1200px" }}>
+  return (
+    <div>
+      <button onClick={() => onScrollToNow()}>NOW</button>
       <Epg {...getEpgProps()}>
         <Layout {...getLayoutProps()} />
       </Epg>
     </div>
-  </div>;
+  );
 };

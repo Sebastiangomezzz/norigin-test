@@ -1,16 +1,16 @@
 import { useMemo } from "react";
 import { useGetEpgData } from "../../hooks/useGetEpgData";
 import { EpgWrapper } from "./EpgWrapper";
-import { useEffect } from "react";
+import {getLogos} from "../../utils/getLogos";
 
 export const ViewPort = () => {
   const { data, loading, error } = useGetEpgData();
-
+  
   const channels = useMemo(
     () =>
       data?.map((channel) => {
         return {
-          logo: channel.images.logo,
+          logo: getLogos(channel.id),
           uuid: channel.id,
         };
       }),
@@ -24,8 +24,9 @@ export const ViewPort = () => {
         ...arrayOfPrograms,
         ...channel?.schedules?.map((schedule) => ({
           channelUuid: channel.id,
-          id: schedule.id,
-          image: null,
+          id: schedule.id + Math.random(),
+          image: '',
+          description: schedule.title,
           since: new Date(schedule.start),
           till: new Date(schedule.end),
           title: schedule.title,
@@ -34,10 +35,6 @@ export const ViewPort = () => {
     });
     return arrayOfPrograms;
   }, [data]);
-
-  useEffect(() => {
-    console.log(epg, "/-/-/", channels);
-  }, [epg, channels]);
 
   return (
     <div>
