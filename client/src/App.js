@@ -1,10 +1,12 @@
 import "./App.css";
-import { ViewPort } from "./components/epg/ViewPort";
+import { EpgViewport } from "./components/epg/EpgViewport";
+import { Layout } from './components/layout/Layout/Layout';
+
 export const App = () => {
   return (
-    <div>
-      <ViewPort />
-    </div>
+    <Layout>
+      <EpgViewport />
+    </Layout>
   );
 };
 

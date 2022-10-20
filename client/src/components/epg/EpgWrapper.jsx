@@ -1,23 +1,21 @@
 import { useEpg, Epg, Layout } from "planby";
+import { Wrapper } from "./EpgWrapper.styles";
+import { epgTheme as theme } from "./epgTheme";
+
 export const EpgWrapper = ({ epg, channels }) => {
-  const {
-    getEpgProps,
-    getLayoutProps,
-    onScrollToNow,
-    onScrollLeft,
-    onScrollRight,
-  } = useEpg({
+  
+  const { getEpgProps, getLayoutProps, onScrollToNow } = useEpg({
     epg,
     channels,
-    itemHeight: 90,
+    theme
   });
 
   return (
-    <div>
-      <button onClick={() => onScrollToNow()}>NOW</button>
-      <Epg {...getEpgProps()}>
+    <Wrapper>
+      <Epg {...getEpgProps()} style={{ padding: 0 }}>
+        <button onClick={() => onScrollToNow()}>NOW</button>
         <Layout {...getLayoutProps()} />
       </Epg>
-    </div>
+    </Wrapper>
   );
 };
