@@ -16,14 +16,13 @@ export const EpgTimeline = ({
   offsetStartHoursRange,
   sidebarWidth,
 }) => {
-  const { time, dividers, formatTime } = useTimeline(
+  const { time, formatTime } = useTimeline(
     numberOfHoursInDay,
     isBaseTimeFormat
   );
 
   const renderTime = (index) => (
     <TimelineBox key={index} width={hourWidth}>
-      {console.log(renderDividers())}
       <TimelineTime
         style={{ color: "white", fontSize: "1.2rem", marginLeft: "-0.2rem" }}
       >
@@ -33,19 +32,14 @@ export const EpgTimeline = ({
     </TimelineBox>
   );
 
-  const renderDividers = () =>
-    dividers.map((_, index) => (
-      <TimelineDivider key={index} width={hourWidth} />
-    ));
-
   return (
-    <TimelineWrapper
-      dayWidth={dayWidth}
-      sidebarWidth={sidebarWidth}
-      isSidebar={isSidebar}
-      style={{ zIndex: 1000 }}
-    >
-      {time.map((_, index) => renderTime(index))}
-    </TimelineWrapper>
+      <TimelineWrapper
+        dayWidth={dayWidth}
+        sidebarWidth={sidebarWidth}
+        isSidebar={isSidebar}
+        style={{ zIndex: 1000 }}
+      >
+        {time.map((_, index) => renderTime(index))}
+      </TimelineWrapper>
   );
 };
