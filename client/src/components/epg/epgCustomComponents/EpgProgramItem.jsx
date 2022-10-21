@@ -29,12 +29,14 @@ export const EpgProgramItem = ({ program, ...rest }) => {
         <ProgramFlex
           style={{
             backgroundColor: isLive ? "#393939" : "#111111",
-            border: isLive ? "none" : "1px solid #393939",
+            border: "0.1px solid rgb(114,111,105, 0.2)"
           }}
         >
           {/* {isLive && isMinWidth && <ProgramImage src={image} alt="Preview" />} */}
           <ProgramStack style={{ padding: "1rem" }}>
-            <ProgramTitle style={{ fontWeight: "normal", paddingBottom: '0.1rem' }}>
+            <ProgramTitle
+              style={{ fontWeight: "normal", paddingBottom: "0.1rem" }}
+            >
               {title}
             </ProgramTitle>
             <ProgramText>

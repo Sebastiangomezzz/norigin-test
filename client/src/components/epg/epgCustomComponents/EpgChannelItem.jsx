@@ -1,6 +1,5 @@
 import { ChannelBox, ChannelLogo } from "planby";
 
-
 export const EpgChannelItem = ({ channel }) => {
   const { position, logo } = channel;
   return (

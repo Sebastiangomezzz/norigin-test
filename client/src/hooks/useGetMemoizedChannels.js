@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { getLogos } from "../utils/getLogos";
+import { getLogos } from "../utils";
 
 export const useGetMemoizedChannels = ({ data }) => {
   const channels = useMemo(

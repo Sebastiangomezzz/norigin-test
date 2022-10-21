@@ -2,7 +2,6 @@ import {
   TimelineWrapper,
   TimelineBox,
   TimelineTime,
-  TimelineDivider,
   TimelineDividers,
   useTimeline,
 } from "planby";
@@ -37,7 +36,7 @@ export const EpgTimeline = ({
         dayWidth={dayWidth}
         sidebarWidth={sidebarWidth}
         isSidebar={isSidebar}
-        style={{ zIndex: 1000 }}
+        style={{ zIndex: 1000, border: "0.1px solid rgb(114,111,105, 0.2)" }}
       >
         {time.map((_, index) => renderTime(index))}
       </TimelineWrapper>
