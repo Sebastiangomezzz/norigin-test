@@ -129,13 +129,19 @@ table {
   border-spacing: 0;
 }
 
-/* .css-oa3kic-ProgramBox.e1f8qikj6{
-  background-color: #f5f5f5;
-} */
-
-.css-g0fxqb-Box .ec9jzma0{
-  background-color: #2b1010;
+/* Timeline */
+.css-1peae07-TimelineWrapper.ebfc5081 {
+  background-color: #202020;
 }
-.css-11y0o7g-Box .e1dhe7bi0{
-  background-color: #2b1010;
+
+/* Timeline left-top box */
+.css-1olpj1k-Box.e1ra9c6c1 {
+  background-color: #202020;
+}
+
+.css-9yws53-Content.e1ra9c6c0 {
+  background-color:#202020;
+}
+.planby {
+  background-color:#202020;
 }
