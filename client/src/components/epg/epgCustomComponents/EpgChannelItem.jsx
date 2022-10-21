@@ -1,4 +1,4 @@
-import { ChannelBox, ChannelLogo, ChannelBoxDivider } from "planby";
+import { ChannelBox, ChannelLogo } from "planby";
 
 
 export const EpgChannelItem = ({ channel }) => {

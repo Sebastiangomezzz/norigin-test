@@ -3,7 +3,7 @@ import {
   useGetMemoizedChannels,
   useGetMemoizedEpg,
 } from "../../hooks";
-import { EpgWrapper } from "./EpgWrapper";
+import { EpgWrapper } from "./EpgWrapper/EpgWrapper";
 
 export const EpgViewport = () => {
   const { data } = useGetEpgData();
