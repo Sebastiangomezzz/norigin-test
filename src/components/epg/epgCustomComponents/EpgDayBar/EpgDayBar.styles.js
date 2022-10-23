@@ -20,7 +20,7 @@ export const DateWrapper = styled.div`
   justify-content: center;
   align-items: center;
   height: 3rem;
-  padding: 0.5rem 1rem 0.5rem 0;
+  padding: 0.5rem 6rem 0.5rem 0;
   background-color: #202020;
   min-width: 15rem;
   color: white;

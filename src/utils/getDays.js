@@ -15,7 +15,7 @@ export const getDays = () => {
     "Fri",
     "Sat",
   ];
-  for (let i = -3; i < 4; i++) {
+  for (let i = -2; i < 3; i++) {
     const newDate = new Date(year, month, date + i - day);
     const dayName = dayNames[newDate.getDay()];
     const monthNumber = month > 9 ? month : `0${month}`;

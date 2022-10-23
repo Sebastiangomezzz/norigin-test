@@ -7,7 +7,7 @@ export const EpgDayBarItem = ({ date, index }) => {
 
   return (
     <Wrapper
-      style={{ color: index === 3 ? "white" : "#949494" }}
+      style={{ color: index === 2 ? "white" : "#949494" }}
       onClick={handleChangeDay}
     >
       <p>{date.dayName}</p>
