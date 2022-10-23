@@ -1,4 +1,4 @@
-import {useState} from "react";
+import { useState } from "react";
 import { DateWrapper, StarWrapper } from "./EpgDayBar.styles";
 import { EpgDayBarItem } from "./EpgDayBarItem";
 import { getDays } from "../../../../utils";
@@ -13,17 +13,21 @@ export const EpgDayBar = () => {
   };
 
   return (
-      <DateWrapper>
+    <DateWrapper>
       <StarWrapper>
-        <StarIcon sx={{ color: isFavourite ? '#d39b24' : '#393939' }} fontSize='large' onClick={ handleFavourite } />
+        <StarIcon
+          sx={{ color: isFavourite ? "#d39b24" : "#393939" }}
+          fontSize="large"
+          onClick={handleFavourite}
+        />
       </StarWrapper>
-        {days.map((day, index) => (
-          <EpgDayBarItem
-            date={day}
-            key={day.dayName + day.monthNumber}
-            index={index}
-          />
-        ))}
-      </DateWrapper>
+      {days.map((day, index) => (
+        <EpgDayBarItem
+          date={day}
+          key={day.dayName + day.monthNumber}
+          index={index}
+        />
+      ))}
+    </DateWrapper>
   );
 };
