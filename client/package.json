@@ -1,5 +1,5 @@
 {
-  "name": "client",
+  "name": "norigin-test",
   "version": "0.1.0",
   "private": true,
   "license": "MIT",
@@ -21,10 +21,12 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "build": "react-scripts build --outdir dist"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": "https://github.com/Sebastiangomezzz/norigin-test",
   "eslintConfig": {
     "extends": [
       "react-app",
