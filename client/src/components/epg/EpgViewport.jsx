@@ -4,6 +4,7 @@ import {
   useGetMemoizedEpg,
 } from "../../hooks";
 import { EpgWrapper } from "./EpgWrapper/EpgWrapper";
+import { CustomSkeleton } from '../layout';
 
 export const EpgViewport = () => {
   const { data } = useGetEpgData();
@@ -11,11 +12,11 @@ export const EpgViewport = () => {
   const { epg } = useGetMemoizedEpg({ data });
 
   return (
-    <div>
+    <div style={{ backgroundColor: "#202020" }}>
       {epg && epg.length > 0 && channels && channels.length ? (
         <EpgWrapper epg={epg} channels={channels} />
       ) : (
-        <div>Loading...</div>
+        <CustomSkeleton/>
       )}
     </div>
   );

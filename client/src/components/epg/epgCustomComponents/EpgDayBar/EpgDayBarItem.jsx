@@ -1,7 +1,19 @@
-import React from 'react'
+import { Wrapper } from "./EpgDayBarItem.styles";
 
-export const EpgDayBarItem = ({date}) => {
+export const EpgDayBarItem = ({ date, index }) => {
+  const handleChangeDay = () => {
+    console.log("change day", date);
+  };
+
   return (
-    <div>EpgDayBarItem</div>
-  )
-}
+    <Wrapper
+      style={{ color: index === 3 ? "white" : "#949494" }}
+      onClick={handleChangeDay}
+    >
+      <p>{date.dayName}</p>
+      <p>
+        {date.dayNumber}.{date.monthNumber}.
+      </p>
+    </Wrapper>
+  );
+};
