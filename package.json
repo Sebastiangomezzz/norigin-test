@@ -1,8 +1,9 @@
 {
   "name": "@Sebastiangomezzz/norigin-test",
-  "version": "0.1.7",
+  "version": "0.2.0",
   "private": false,
   "license": "MIT",
+  "files": ["build/*"],
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
@@ -21,7 +22,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build --outdir dist"
+    "build": "react-scripts build"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
